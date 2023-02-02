@@ -15,6 +15,6 @@ The dashboad will be displayed on localhost:1234
 
 # Environment variables
 athena.js needs the environment variables from your aws account
-    - region
-    - accessKeyId
-    - secretAccessKey
+- region
+- accessKeyId
+- secretAccessKey
