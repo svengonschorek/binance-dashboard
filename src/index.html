@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Binance Reporting</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Binance Account Report</h1>
+    <div class="wrapper">
+      <div id="line_chart">
+        <h2>Daily wallet amount</h2>
+        <canvas id="wallet"></canvas>
+        <script type="module" src="wallet.js"></script>
+      </div>
+      <div id="doughnut_chart" >
+        <h2>Value distribution</h2>
+        <canvas id="assets"></canvas></div>
+        <script type="module" src="assets.js"></script>
+        <select id="dropdown"></select>
+        <script>
+          var dropdown = document.getElementById('dropdown')
+          var getDaysArray = function(start, end) {
+            var dateformat = { year: 'numeric', month: 'long', day: 'numeric' };
+            for(var arr=[], dt=new Date(end); dt>=new Date(start); dt.setDate(dt.getDate()-1)){
+              arr.push(new Date(dt).toLocaleDateString('en-US', dateformat));
+            }
+            return arr
+          }
+
+          var options = getDaysArray(new Date("2023-01-19"), new Date())
+          for(var i = 0, l = options.length; i < l; i++){
+            var option = options[i];
+            dropdown.options.add( new Option(option) );
+          }
+        </script>
+    </div>
+  </body>
+</html>
+ 

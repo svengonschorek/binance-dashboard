@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat'; text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+#line_chart {
+    width: 100%;
+    margin: auto;
+}
+
+#doughnut_chart {
+    width: 50%;
+    margin: auto;
+}
+@media (min-width: 800px) {
+    #line_chart {
+        width: 75%;
+        float:left;
+    }
+    #doughnut_chart {
+        width: 25%;
+        float:left;
+    }
+
+    .wrapper {
+        content:"";
+        display: table;
+        clear: both;
+    }
+}
