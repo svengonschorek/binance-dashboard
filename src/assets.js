@@ -11,7 +11,7 @@ var doughnut_chart = new Chart(ctx, {
     }
 })
 
-async function load_assets() {
+window.onload = async function() {
 
     let dateFilter = new Date().toISOString()
 
@@ -37,7 +37,6 @@ async function load_assets() {
     doughnut_chart.update()
 
 }
-load_assets()
 
 filter = document.getElementById('dropdown')
 filter.onchange = async function(){
