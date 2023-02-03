@@ -17,7 +17,7 @@
         <h2>Value distribution</h2>
         <canvas id="assets"></canvas></div>
         <script type="module" src="assets.js"></script>
-        <select id="dropdown"></select>
+        <select id="dropdown" onchange="update_assets()" src="assets.js"></select>
         <script>
           var dropdown = document.getElementById('dropdown')
           var getDaysArray = function(start, end) {
