@@ -17,7 +17,7 @@
         <h2>Value distribution</h2>
         <canvas id="assets"></canvas></div>
         <script type="module" src="assets.js"></script>
-        <select id="dropdown" onchange="update_assets()" src="assets.js"></select>
+        <select id="dropdown" src="assets.js"></select>
         <script>
           var dropdown = document.getElementById('dropdown')
           var getDaysArray = function(start, end) {
@@ -31,9 +31,23 @@
           var options = getDaysArray(new Date("2023-01-19"), new Date())
           for(var i = 0, l = options.length; i < l; i++){
             var option = options[i];
-            dropdown.options.add( new Option(option) );
+            dropdown.options.add(new Option(option));
           }
         </script>
+        <table id="pl_table">
+          <tr id="yearly_pl">
+            <td><b>Yearly P/L:</b></td>
+            <td><b><span id="yearly_value"></span><b></b></td>
+          </tr>
+          <tr id="monthly_pl">
+            <td>Monthly P/L:</td>
+            <td><span id="monthly_value"></td>
+          </tr>
+          <tr id="daily_pl">
+            <td>Daily P/L:</td>
+            <td><span id="daily_value"></td>
+          </tr>
+        </table>
     </div>
   </body>
 </html>

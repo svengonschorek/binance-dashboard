@@ -1,13 +1,20 @@
 body {
-    font-family: 'Montserrat'; text-align: center;
+    font-family: 'Montserrat';
+}
+
+h1 {
+    text-align: center;
 }
 
 .wrapper {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
 }
 
 #line_chart {
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 
@@ -15,6 +22,21 @@ body {
     width: 50%;
     margin: auto;
 }
+
+#pl_table {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    border-spacing: 0 10px;
+}
+
+#yearly_pl {
+    font-size: large;
+}
+
 @media (min-width: 800px) {
     #line_chart {
         width: 75%;
@@ -23,6 +45,11 @@ body {
     #doughnut_chart {
         width: 25%;
         float:left;
+    }
+    #pl_table {
+        width: 20%;
+        height: 100%;
+        float: left;
     }
 
     .wrapper {
