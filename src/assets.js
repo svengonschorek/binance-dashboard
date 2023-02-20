@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto'
 
-import { getAssetAmounts } from './athena'
+import { getAssetAmounts, getProfitLoss } from './athena'
 
 var ctx = document.getElementById('assets').getContext('2d');
 var doughnut_chart = new Chart(ctx, {
@@ -35,6 +35,16 @@ window.onload = async function() {
 
     doughnut_chart.data = initial_data
     doughnut_chart.update()
+
+    let kpi_data = await getProfitLoss();
+
+    yearly_value = kpi_data.map(row => row.yearly_pl)[0].toFixed(2)
+    monthly_value = kpi_data.map(row => row.monthly_pl)[0].toFixed(2)
+    daily_value = kpi_data.map(row => row.daily_pl)[0].toFixed(2)
+
+    document.getElementById('yearly_value').innerHTML = yearly_value + "€"
+    document.getElementById('monthly_value').innerHTML = monthly_value + "€"
+    document.getElementById('daily_value').innerHTML = daily_value + "€"
 
 }
 
