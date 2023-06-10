@@ -10,7 +10,7 @@
     "athena-express": "^7.1.5",
     "aws-sdk": "^2.634.0",
     "events": "^3.3.0",
-    "parcel": "^2.6.2",
+    "parcel": "^2.8.3",
     "process": "^0.11.10",
     "punycode": "^1.4.1",
     "querystring-es3": "^0.2.1"

@@ -56,7 +56,7 @@ export async function getWalletAmount() {
             order by ts
         `,
         db: "raw_data",
-        pagination: 100
+        pagination: 200
     }
 
     let data = [];
